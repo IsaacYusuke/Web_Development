@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    
+    <h3>Desempenho do Aluno</h3>
+
+    Informe a nota do Aluno: <br> 
+    <input id="nota"> <br>
+
+    Informe a frequência do Aluno: <br> 
+    <input id="frequencia"> <br>
+
+    <button onclick="analisar()">Analisar Aluno</button> 
+    <br>
+    <div id="msg_aluno"></div> 
+    <div id="msg_freq"></div>
+
+</body>
+</html>
+<script>
+    function analisar(){
+        var num_nota = Number(nota.value);
+        var num_freq = Number(frequencia.value);
+
+        if(num_nota >= 0 && num_nota < 6){
+            msg_aluno.innerHTML = "<b>Aluno ficou abaixo da média</b>";
+        } else if (num_nota >= 6 && num_nota <= 8){
+            msg_aluno.innerHTML = "<b>Aluno ficou da média</b>";
+        } else if (num_nota > 8 && num_nota <= 10){
+            msg_aluno.innerHTML = "<b>Aluno acima da média</b>";
+        }
+
+        if (num_freq >= 75 && num_freq <= 100){
+            msg_freq.innerHTML = "<b>Aluno aprovado por frequência</b>";
+        } else {
+            msg_freq.innerHTML = "<b>Aluno reprovado por frequência</b>";
+        }
+
+        if (num_nota < 0 || num_nota > 10){
+            alert('Onde já se viu nota <0 ou >10?!');
+            msg_aluno.innerHTML = "";
+            msg_freq.innerHTML = "";
+        }
+        if (num_freq < 0 || num_freq > 100){
+            alert('Onde já se viu frequência <0 ou >100?!');
+            msg_aluno.innerHTML = "";
+            msg_freq.innerHTML = "";
+        }
+    }
+</script>

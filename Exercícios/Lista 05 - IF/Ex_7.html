@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    
+    <h3>Financiamento da Casa Própria</h3>
+
+    Insira o valor da renda familiar: <br>
+    <input id="renda_familiar"> <br>
+
+    Insira o valor da prestação: <br>
+    <input id="prestacao"> <br>
+
+    <button onclick="calculo_financiamento()">Verificar financiamento</button>
+
+    <div id="msg_financiamento"></div>
+
+</body>
+</html>
+<script>
+    function calculo_financiamento(){
+        var calculo_prestacao = (Number(prestacao.value) / Number(renda_familiar.value)) *100;
+
+        msg_financiamento.innerHTML = `A prestação corresponde a ${calculo_prestacao.toFixed(1)}% da renda familiar`;
+
+        if(calculo_prestacao > 30){
+            msg_financiamento.innerHTML = `
+            A prestação corresponde a ${calculo_prestacao.toFixed(1)}% da renda familiar <br>
+            <b style="color: red;"> Será necessário complementar a renda familiar </b>`;
+        }
+    }
+</script>

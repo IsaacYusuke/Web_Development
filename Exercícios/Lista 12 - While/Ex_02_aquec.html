@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+
+    <h3>Contador Regressivo</h3>
+
+    <button onclick="calcular()">Contar</button> <br>
+    <div id="msg_contar"></div>
+
+</body>
+</html>
+<script>
+    
+    function calcular(){
+        var contador = 200;
+        msg = '';
+
+        while(contador > -1){
+            msg += `${contador}<br>`;
+            contador = contador -5;
+        }
+        msg_contar.innerHTML = msg;
+    }
+</script>

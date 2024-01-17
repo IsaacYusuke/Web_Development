@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    <h3>Mensagem Motivacional</h3>
+
+    Escreva uma frase: <input id="frase"> <br>
+    Número de repetições: <input id="repeticao"> <br>
+
+    <button onclick="calculo()">Diga algo sobre a quarentena</button> <br> <br>
+    <div id="msg_frase"></div>
+
+</body>
+</html>
+<script>
+    function calculo(){
+        var frase_digitada = frase.value;
+        var num_repeticao = Number(repeticao.value);
+        msg_frase.innerHTML ='';
+        
+        for (var contador = 1; contador <= num_repeticao;contador++){
+            msg_frase.innerHTML += `${contador}. `;
+            msg_frase.innerHTML += `${frase_digitada} <br>`;
+        }
+    }
+</script>

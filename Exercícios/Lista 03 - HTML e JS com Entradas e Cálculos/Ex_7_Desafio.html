@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafio</title>
+</head>
+<body>
+    <h2><b>Desafio</b></h2>
+
+    Nome do Aluno: <input id="aluno"> <br>
+    Quantidade de aulas totais: <input id="aulas_totais"> <br>
+    Quantidade de faltas: <input id="faltas"> <br>
+    <br>
+    <button onclick="calcular()">Calcular Frequência</button>
+    
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function calcular() { 
+       var frequencia = Number(aulas_totais.value) - Number(faltas.value);
+       var resultado = (frequencia / Number(aulas_totais.value)) * 100;
+
+       div_resultado.innerHTML = `Olá ${aluno.value}! Sua frequência foi de <b style="color:green">${resultado}%</b>`;
+    }
+
+
+</script>

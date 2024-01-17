@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+
+    Você já clicou <b id="num_vezes">0</b> vezes. <br>
+
+    <button onclick="contador()">
+        Clica neu
+    </button> <br>
+
+    <div id="msg_clique"></div>
+    
+</body>
+</html>
+<script>
+
+function contador() {
+    
+    var vezes = Number(num_vezes.innerHTML);
+    vezes++;
+    num_vezes.innerHTML = vezes;
+
+    if (vezes < 5){
+        msg_clique.innerHTML= "Dedo fraquinho, hein";
+    } else if (vezes <= 10 ){
+        msg_clique.innerHTML= "Dedo bom, mano";
+    } else if (vezes <= 15 ){
+        msg_clique.innerHTML= "Gosta de clicar, hein!";
+    } else{
+        msg_clique.innerHTML= "Eita dedo nervoso!";
+    }
+}
+</script>

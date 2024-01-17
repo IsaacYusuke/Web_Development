@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex_17</title>
+</head>
+<body>
+
+    <h1>A história de uma pizza</h1><br>
+    
+    <button onclick="chegou()">Acabou de chegar</button>
+    <button onclick="minuto1()">Depois de 1 minuto</button> 
+    <button onclick="minuto5()">Depois de 5 minutos</button> 
+    <button onclick="minuto15()">Depois de 15 minutos</button> <br>
+
+    <img id='pizza' width="300px">
+    
+
+</body>
+</html>
+
+<script>
+    function chegou() {
+        pizza.src = 'pizza_inteira.jpg';
+    }
+    function minuto1() {
+        pizza.src = 'pizza_quase_inteira.jpg';
+    }
+    function minuto5() {
+        pizza.src = 'pizza_metade.jpg';
+    }
+    function minuto15() {
+        pizza.src = 'pizza_restos.jpg';
+    }
+
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <h3>Saldo Bancário</h3>
+
+    Informe quantos depositos você realizou: <br> 
+    <input id="deposito"> <br>
+    Informe o valor do deposito (R$): <br>
+    <input id="valor"> <br>
+
+    <button onclick="calculo()">Acompanhar grana</button> <br> <br>
+    <div id="msg_saldo"></div>
+
+</body>
+</html>
+<script>
+    function calculo(){
+        var num_deposito = Number(deposito.value);
+        var saldo = Number(valor.value);
+        var total_saldo = 0;
+        msg_saldo.innerHTML ='';
+        
+        for (var contador = 1; contador <= num_deposito; contador++){
+            total_saldo += saldo;
+            msg_saldo.innerHTML += `${contador}° Mês: R$ ${total_saldo.toFixed(2)} <br>`;
+        }
+        msg_saldo.innerHTML += `Total guardado: R$ ${total_saldo.toFixed(2)}`;
+    }
+</script>

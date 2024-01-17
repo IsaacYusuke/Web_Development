@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+
+    <h3>Sorteio do Dado</h3>
+
+    <button onclick="jogar()">Jogar Dado</button> <br>
+    <img id="img_dado">
+    
+</body>
+</html>
+<script>
+    var dado = 0;
+
+    function jogar(){
+        dado = parseInt(Math.random() *6) +1;
+
+        if (dado == 1){
+            img_dado.src = 'dado_1.jpg';
+        } else if (dado == 2){
+            img_dado.src = 'dado_2.jpg';
+        } else if (dado == 3){
+            img_dado.src = 'dado_3.jpg';
+        } else if (dado == 4){
+            img_dado.src = 'dado_4.jpg';
+        } else if (dado == 5){
+            img_dado.src = 'dado_5.jpg';
+        } else{
+            img_dado.src = 'dado_6.jpg';
+        }
+    }
+</script>

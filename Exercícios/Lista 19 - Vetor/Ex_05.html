@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+
+<body>
+    <h3>Alunos</h3>
+
+    Digite o nome de um aluno: <br>
+    <input id="aluno_novo" autofocus>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br> <br>
+
+    <div id="msg_aluno"></div>
+
+</body>
+
+</html>
+<script>
+    let alunos = [];
+
+    function cadastrar() {
+        alunos.innerHTML = '';
+        alunos.push(aluno_novo.value);
+
+        let resetar = 0;
+        for(let contador = alunos.length-1; contador < alunos.length; contador++){
+
+            resetar = alunos.length - contador;
+            msg_aluno.innerHTML += `${alunos[contador]}<br>`;
+        }
+    }
+</script>

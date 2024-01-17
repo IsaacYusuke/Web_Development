@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex_19</title>
+</head>
+<body>
+    <h3>Dragon Ball Z</h3>
+
+    <p>ki base do Guerreiro Sayajin: 2000</p>
+
+     <button onclick="ssj()" id="btn_ssj" >Transformar em SSJ</button> 
+     <button onclick="ssj2()" id="btn_ssj2" >Transformar em SSJ2</button> 
+     <button onclick="ssj3()" id="btn_ssj3" >Transformar em SSJ3</button> <br> <br>
+     <button onclick="voltar()" id="btn_voltar" >Voltar para forma base</button>
+
+     <div id="transformar">
+    </div>
+
+      
+</body>
+</html>
+
+<script>
+    function ssj(){
+        transformar.innerHTML = '<span style="color: darkblue;">ki na forma SSJ: 100000</span>';
+        transformar.style.display = 'block';
+    }
+
+    function ssj2(){
+        transformar.innerHTML = '<span style="color: yellow;background-color: blue;">ki na forma SSJ: 200000</span>';
+        transformar.style.display = 'block';
+    }
+
+    function ssj3(){
+        transformar.innerHTML = '<span  style="color: orange;background-color: yellow;">ki na forma SSJ: 400000</span>';
+        transformar.style.display = 'block';
+    }
+
+    function voltar(){
+        transformar.style.display = 'none';
+    }
+
+</script>

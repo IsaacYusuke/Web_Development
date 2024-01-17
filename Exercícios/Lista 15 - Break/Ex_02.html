@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h3>Número da Sorte</h3>
+
+    Insira um número inteiro entre 0 e 100: <input id="numero"> <br>
+
+    <button onclick="calcular()">Testar minha sorte</button>
+
+    <div id="msg_sorte"></div>
+
+</body>
+</html>
+<script>
+    function calcular(){
+        let valor_num = Number(numero.value);
+        let contador = 0;
+
+        while(contador <= 20){
+            let num_sorteado = parseInt(Math.random()*101);
+
+            if(num_sorteado == valor_num){
+                break;
+            }
+            contador++
+        }
+        if(contador <= 20){
+            msg_sorte.innerHTML = `Muito bem, você é uma pessoa de sorte! <br>
+            Seu número saiu no ${contador}º sorteio`;
+        } else {
+            msg_sorte.innerHTML = `É, você não tem muita sorte em sorteios, pelo visto.`;
+        }
+    }
+</script>

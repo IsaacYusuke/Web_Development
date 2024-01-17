@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex_9</title>
+</head>
+<body>
+    <input id="quant_filhos" placeholder="Quantidade de Filhos"> 
+    <br>
+    <button onclick="calcular_auxilio()">Calcular Auxiliar Filhos</button>
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function calcular_auxilio(){
+        var auxilio_filhos = Number(quant_filhos.value) * 25;
+        var dinheiro_auxilio = 'R$'+ auxilio_filhos + ',00';
+
+        mensagem.innerHTML = `Você tem <b>${quant_filhos.value}</b> filhos,
+                                 logo, seu "Auxílio Filhos" será de <b><i>${dinheiro_auxilio}</i><b>`
+    }
+
+</script>

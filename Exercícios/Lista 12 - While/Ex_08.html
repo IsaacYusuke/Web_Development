@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    <h3>Tabuada</h3>
+
+    Escolha uma tabuada.
+
+    <select id="tabuada" onchange="resultado()">
+        <option value="">-- --</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        </select> <br> <br>
+
+        <div id="msg_tabuada"></div>
+</body>
+</html>
+<script>
+    function resultado(){
+        var num = Number(tabuada.value);
+        contador = 0;
+        msg_tabuada.innerHTML = '';
+
+        while (contador++ < 10){
+            var conta = contador * num;
+            var impar_par = conta % 2;
+
+            if(impar_par == 0 ){
+                msg_tabuada.innerHTML += 
+                `<span style="color: blue">${contador} X <u>${num}</u> = <b>${conta}<b/><br></span>`;
+            } else {
+                msg_tabuada.innerHTML += 
+                `<span style="color: red">${contador} X <u>${num}</u> = <b>${conta}<b/><br></span>`;
+            
+            }
+        }
+    }
+</script>

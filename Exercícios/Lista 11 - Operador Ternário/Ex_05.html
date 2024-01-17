@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    <h3>Faculdade</h3>
+
+    Digite a nota 1:  <br>
+    <input id="nota_1"> <br>
+    Digite a nota 2: <br>
+    <input id="nota_2"> <br>
+
+    <button onclick="verificar()">Verificar Resultado</button> <br>
+    <div id="msg_aluno"></div>
+
+</body> 
+</html>
+<script>
+    function verificar(){
+        var valor_1 = Number(nota_1.value);
+        var valor_2 = Number(nota_2.value);
+        var calculo = (valor_1 + valor_2)/2;
+
+        var mensagem = calculo < 6 ?
+        "Infelizmente reprovado" :
+        
+        calculo >= 6 && calculo <= 7.5 ?
+        "Aprovado - Automação, Seg ou Testes" :
+        "Aprovado - Dev"
+
+        msg_aluno.innerHTML = mensagem;
+    }
+</script>

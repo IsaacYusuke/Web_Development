@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    
+    <h3>Tipos de  Números</h3>
+
+    Número Par: <b id="b_par">0</b> <br>
+    Número Ímpar: <b id="b_impar">0</b> <br>
+
+    <button onclick="sortear()">Sortear Número</button> <br>
+    <div id="msg_num"></div>
+
+</body>
+</html>
+<script>
+    var num_sorteado = 0;
+    var num_par = 0;
+    var num_impar = 0;
+
+    function sortear(){
+        num_sorteado = parseInt(Math.random()*100);
+        var calculo = num_sorteado % 2;
+        msg_num.innerHTML = num_sorteado;
+
+    if (calculo == 0) {
+        b_par.innerHTML = ++num_par;
+    } else {
+        b_impar.innerHTML = ++num_impar;
+    }
+    }
+</script>

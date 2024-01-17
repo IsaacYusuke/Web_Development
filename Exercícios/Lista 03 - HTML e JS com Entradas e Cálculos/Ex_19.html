@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 19</title>
+</head>
+<body>
+    
+    <h3>Times de futebol</h3>
+
+    <select id="time" onchange="escudo()">
+        <option value="">- Escolha um time -</option>>
+        <option value="sao_paulo.jpg">São Paulo</option>
+        <option value="palmeiras.png">Palmeiras</option>
+        <option value="santos.png">Santos</option>
+        <option value="corinthians.jpg">Corinthians</option>
+    </select>
+
+    <div id="div_escudo" style=></div>
+</body>
+</html>
+
+<script>
+    function escudo() {
+        div_escudo.innerHTML = time.value;
+    }
+
+</script>

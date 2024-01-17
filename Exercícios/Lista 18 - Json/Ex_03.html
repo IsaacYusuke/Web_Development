@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h3>Poupança do Banco</h3>
+
+    Saldo: R$ <b id="b_saldo">0.00</b> <br>
+    Depósitos: <b id="b_deposito">0</b> <br>
+    Saques: <b id="b_saque">0</b> <br>
+    <br>
+    <button onclick="depositar_100()">Depositar 100</button>
+    <button onclick="sacar_20()">Sacar 20</button>
+
+</body>
+</html>
+<script>
+    let valor_saldo = Number(b_saldo.innerHTML);
+    let qtd_deposito = Number(b_deposito.innerHTML);
+    let qtd_saque = Number(b_saque.innerHTML);
+
+    function depositar_100(){
+        valor_saldo = valor_saldo + 100;
+        b_saldo.innerHTML = valor_saldo;
+        qtd_deposito ++;
+        b_deposito.innerHTML = qtd_deposito;
+    }
+    function sacar_20(){
+        valor_saldo = valor_saldo - 20;
+        b_saldo.innerHTML = valor_saldo;
+        qtd_saque ++;
+        b_saque.innerHTML = qtd_saque;
+    }
+</script>

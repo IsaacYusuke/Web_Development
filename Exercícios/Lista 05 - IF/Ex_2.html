@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+
+    <h3>Notas Escolares</h3>
+
+    Nota 1: <br>
+    <input id="nota_1"> <br>
+    Nota 2: <br>
+    <input id="nota_2"> <br>
+    Nota 3: <br>
+    <input id="nota_3"> <br>
+
+    <button onclick="media_notas()">Analisar desempenho</button> <br>
+
+    <div id="msg_media_nota"></div>
+    
+</body>
+</html>
+
+<script>
+    function media_notas(){
+        var calculo_media = (Number(nota_1.value) + Number(nota_2.value) + Number(nota_3.value)) /3;
+
+        msg_media_nota.innerHTML =`<b>Sua média foi de ${calculo_media.toFixed(2)}.</b>`;
+
+        if (calculo_media > 9.4){
+            msg_media_nota.innerHTML = `
+            <b>Sua média foi de ${calculo_media.toFixed(2)}.</b> <br>
+            <b>Parabéns, você é fora de série!</b>`;
+        }
+
+    }
+</script>

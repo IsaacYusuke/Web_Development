@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+
+<body>
+    <h3>Sobrenome</h3>
+
+    Digite o nome e sobrenome: <br>
+    <input id="nome_novo" autofocus>
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br> <br>
+    <button onclick="achar_silva()">Quantos são da família Silva?</button>
+    <br> <br>
+
+    <div id="msg_cadastrados"></div>
+    <div id="msg_qtd_silva"></div>
+    <div id="msg_nome_silva"></div>
+
+</body>
+
+</html>
+<script>
+    let nomes = [];
+
+    function cadastrar() {
+        msg_cadastrados.innerHTML = '';
+        msg_qtd_silva.innerHTML = '';
+        msg_nome_silva.innerHTML = '';
+        nomes.push(nome_novo.value);
+        msg_cadastrados.innerHTML = `Nomes Cadastrados: ${nomes.length} <br>`;
+    }
+
+    function achar_silva(){
+        let contador = 0;
+        for(let posicao = 0; posicao < nomes.length; posicao++){
+
+            if((nomes[posicao].indexOf('Silva') !== -1) || (nomes[posicao].indexOf('silva') !== -1)){
+                msg_nome_silva.innerHTML += `<b>${nomes[posicao]}</b> <br>`
+                contador++;
+            }
+        msg_qtd_silva.innerHTML = `<b>Existem ${contador} pessoas com 'Silva' no nome.</b> <br>`;
+        }
+    }
+</script>

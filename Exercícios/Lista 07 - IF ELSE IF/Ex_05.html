@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    <h3>Clínica de Nutrição</h3>
+
+    Quantos pães franceses você comeu por dia: <br>
+    <input id="quant_pao"> <br>
+
+    Quantos pct de bolacha recheada você comeu por dia: <br>
+    <input id="quant_bolacha"> <br>
+
+    Quantos copos de achocolatado você tomou por dia: <br>
+    <input id="quant_achocolatado"> <br>
+
+    <button onclick="verificar_energia()">Verificar calorias</button>
+
+    <div id="msg_nutricao"></div>
+
+</body>
+</html>
+<script>
+    function verificar_energia(){
+        var pao = Number(quant_pao.value) *50;
+        var bolacha = Number(quant_bolacha.value) *80;
+        var achocolatado = Number(quant_achocolatado.value) *70;
+        var total_calorias = pao + bolacha + achocolatado;
+
+        if (total_calorias <200){
+            msg_nutricao.innerHTML = `
+            Parabéns, vai sair em forma da quarentena!`;
+        } else if (total_calorias <= 400){
+            msg_nutricao.innerHTML = `
+            Cuidado, vai ficar mais "fofinho(a)" após quarentena!`;
+        } else{
+            msg_nutricao.innerHTML = `
+            Bom, acho que muitos não vão te reconhecer após a quarentena`;
+        } 
+
+    }
+
+</script>

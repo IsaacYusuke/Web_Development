@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    
+    <h3>Empresa para o Estágio</h3>
+
+    Informe o nome da empresa: <br>
+    <input id="empresa"> <br>
+
+    Informe o valor da bolsa da empresa: (R$)<br>
+    <input id="bolsa"> <br>
+
+    Informe o valor do VR da empresa: (R$)<br>
+    <input id="vr"> <br>
+
+    Informe  o tempo de descolamento da empresa para a Bandtec: (Minutos)<br>
+    <input id="deslocamento"> <br>
+
+    <button onclick="calcular_estagio()">É preferida?</button>
+
+    <div id="msg_estagio"></div>
+
+</body>
+</html>
+<script>
+    function calcular_estagio(){
+        var nome_empresa = empresa.value;
+        var num_bolsa = Number(bolsa.value);
+        var num_deslocamento = Number(deslocamento.value);
+        var num_vr = Number(vr.value);
+
+        if (num_bolsa >= 1800 || num_deslocamento <= 30 || num_vr >= 20) {
+            msg_estagio.innerHTML = `A empresa ${nome_empresa} é uma de suas preferências`;
+        } else {
+            msg_estagio.innerHTML = `A empresa ${nome_empresa} está fora da sua lista`;
+        }
+    }
+
+</script>

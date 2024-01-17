@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+
+<body>
+    <h3>Filmes</h3>
+
+    Digite um filme que você gosta: <br>
+    <input id="filme_novo">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br> <br>
+
+    <div id="msg_filme"></div>
+
+</body>
+
+</html>
+<script>
+    let filmes = [];
+
+    function cadastrar() {
+        filmes.push(filme_novo.value);
+
+        msg_filme.innerHTML = `Filmes Cadastrados: ${filmes.length} <br>`;
+
+        for(let contador = 0; contador < filmes.length; contador++){
+            let cor = contador % 2 == 0 ? 'blue' : 'red';
+            msg_filme.innerHTML += `<span style="color:${cor}">${filmes[contador]}</span><br>` 
+        }
+    }
+    
+    
+</script>

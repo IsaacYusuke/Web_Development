@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    
+    <h3>Banco Itado</h3>
+
+    Inserir saldo da conta: <br>
+    <input id="saldo_conta"> <br>
+
+    Inserir valor do débito: <br>
+    <input id="debito" placeholder="Valor a tirar da conta"> <br>
+
+    <button onclick="analisar_conta()">Analisar conta</button> <br>
+
+    <div id="msg_banco"></div>
+    
+</body>
+</html>
+
+<script>
+    function analisar_conta(){
+        var saldo_total = Number(saldo_conta.value) - Number(debito.value);
+
+        if (saldo_total >= 0){
+            msg_banco.innerHTML =`
+            <i style="color: blue;">O saldo atual da conta corrente é R$ ${saldo_total.toFixed(2)}</i>.`;
+        } else {
+            msg_banco.innerHTML = `
+            <b style="color: red;">O saldo atual da conta corrente é R$ ${saldo_total.toFixed(2)}.</b>`;
+        }
+    }
+</script>

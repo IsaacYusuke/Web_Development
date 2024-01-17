@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    <h3>Sua vida e o Café c/ Leite</h3>
+
+    Quantas xícaras de café com leite você tomou na vida: <br>
+    <input id="xicaras"> <br>
+
+    <button onclick="calculo()">Ver a quantidade</button> <br> <br>
+    <div id="img_colher"></div>
+    
+</body>
+</html>
+<script>
+    function calculo(){
+        var num_xicaras = Number(xicaras.value);
+        img_colher.innerHTML = '';
+
+        for (var contador = 1; contador <= num_xicaras;contador++){
+            img_colher.innerHTML += `<img src="colher_leite.jpg" height="100px"> `;
+            img_colher.innerHTML += `<img src="colher_cafe.jpg" height="100px"> `;
+            img_colher.innerHTML += `<img src="colher_cafe.jpg" height="100px"> <br>`;
+        }
+    }
+</script>

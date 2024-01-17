@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h3>Times de Futebol</h3>
+
+    <input id="time_bom" placeholder="Digite um time bom"> <br>
+    <input id="time_ruim" placeholder="Digite um time ruim"> <br>
+
+    <button onclick="resultado()">Repetir a realidade</button> <br> <br>
+
+    <div id="msg_resultado"></div>
+
+</body>
+</html>
+<script>
+    function resultado(){
+        msg_resultado.innerHTML = '';
+        var contador = 0;
+        
+        while (contador < 10){
+        contador++;
+        msg_resultado.innerHTML += `<b>${time_bom.value}<b/> é melhor do que <b>${time_ruim.value}<b/> <br><br>`;
+        }
+    }
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    
+    <h3>Gosto por Série</h3>
+
+    Informe a última série (SITCOM) que ele assistiu: <br>
+    <input id="serie"> <br>
+
+    Informe o total de episódios que ele já assistiu da série: <br>
+    <input id="total_episodios"> <br>
+
+    <button onclick="analisar_nivel()">Verificar nível</button> <br>
+
+    <div id="msg_serie"></div>
+    
+</body>
+</html>
+
+<script>
+    function analisar_nivel(){
+        var num_episodios = Number(total_episodios.value) * 22; //22 minutos
+
+        msg_serie.innerHTML =`Vejo que você gosta da série ${serie.value}.`;
+
+        if (num_episodios > 1800){ // 1800 minutos = 30 horas
+            msg_serie.innerHTML = `
+            Vejo que você gosta da série ${serie.value}. <br>
+            Uau, você realmente gosta dessa série!`;
+        }
+
+    }
+</script>

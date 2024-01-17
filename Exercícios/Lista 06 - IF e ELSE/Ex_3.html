@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    
+    <h3>Mercado BOM DOCE</h3>
+
+    Quantidade de chocolate: <br>
+    <input id="quant_chocolates"> <br>
+
+    <button onclick="resultado_compra()">Compra</button> <br>
+
+    <div id="msg_mercado"></div>
+    
+</body>
+</html>
+
+<script>
+    function resultado_compra(){
+        var total_chocolates = Number(quant_chocolates.value);
+        var preco_chocolates;
+        var frase = `O valor da sua compra foi de R$`;
+
+        if (total_chocolates > 12){
+            preco_chocolates = total_chocolates * 2.5;
+            msg_mercado.innerHTML = frase + preco_chocolates.toFixed(2);
+
+        } else {
+            preco_chocolates = total_chocolates * 3;
+            msg_mercado.innerHTML = frase + preco_chocolates.toFixed(2);
+        }
+    }
+</script>

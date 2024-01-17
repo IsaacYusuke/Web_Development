@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 17</title>
+</head>
+<body>
+    
+    <h3>Oração pela paz</h3>
+
+    <select id="trecho">
+        <option value="">- Escolha um trecho -</option>>
+        <option value="Que eu leve o Perdão">Onde houver Ofensa</option>
+        <option value="Que eu leve a União">Onde houver Discórdia</option>
+        <option value="Que eu leve a Fé">Onde houver Dúvida</option>
+        <option value="Que eu leve a Verdade">Onde houver Erro</option>
+    </select>
+
+    <button onclick="revelar()">Revelar boa obra</button>
+
+    <div id="div_oracao" style="color:green;"></div>
+</body>
+</html>
+
+<script>
+    function revelar() {
+        div_oracao.innerHTML = trecho.value;
+    }
+
+</script>

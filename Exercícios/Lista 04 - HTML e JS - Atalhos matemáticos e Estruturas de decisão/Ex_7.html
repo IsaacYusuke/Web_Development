@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex_7</title>
+</head>
+<body>
+    
+    <h3>Calcular Progressão Geométrica</h3>
+
+    Digite o 1º número da progressão: <input id="primeiro_num_prog"> <br>
+    Digite a razão (número): <input id="razao_prog"> <br>
+    Digite o número (termo) da progressão: <input id="termo_prog"> <br>
+
+    <button onclick="calcular_progressao()">Calcular PG</button>
+
+    <div id="mensagem_pg"></div>
+</body>
+</html>
+
+<script>
+    function calcular_progressao() {
+
+        var resul_progressao = Number(primeiro_num_prog.value) * ( Number(razao_prog.value) ** ( Number(termo_prog.value) -1) );
+        mensagem_pg.innerHTML = `O ${termo_prog.value} termo nessa PG será ${resul_progressao}`
+    }
+</script>
+

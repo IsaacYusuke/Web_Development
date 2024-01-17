@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex_2</title>
+</head>
+<body>
+    Qual é o raio da circunferência? <input id="raio"><br>
+
+    <button onclick="calcula_area()">
+            Calcular Área</button>
+
+    <div id="mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function calcula_area() { 
+        var pi = 3.14;
+        var area = pi * (Number(raio.value)**2);
+        mensagem.innerHTML = `A área do circulo é ${area}`;
+    }
+    
+</script>

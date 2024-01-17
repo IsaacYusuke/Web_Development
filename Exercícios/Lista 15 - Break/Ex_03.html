@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h3>Jogo do Amor</h3>
+
+    <button onclick="calcular()">Ver minha sorte</button> <br>
+    <div id="img_sorte"></div> <br>
+    <div id="msg_sorte"></div>
+
+</body>
+</html>
+<script>
+    var sorteio = 0;
+    var cont_coracao = 0;
+    var cont_baralho = 0;
+
+    function calcular(){
+        img_sorte.innerHTML = '';
+
+        for (var contador = 1;contador <=21 ;contador++){
+            sorteio = parseInt((Math.random()*2)+1);
+
+            if(sorteio == 1){
+                img_sorte.innerHTML += `<img src="coracao.png" height="80px" width="100px">`;
+                cont_coracao++;
+            }else{
+                img_sorte.innerHTML += `<img src="baralho.jpg" height="80px" width="100px">`;
+                cont_baralho++;
+            }
+            if(cont_coracao == 11 || cont_baralho == 11){
+                break;
+            }
+        }
+
+        if(cont_coracao > cont_baralho){
+            msg_sorte.innerHTML = "Você tem mais sorte no amor";
+        }else{
+            msg_sorte.innerHTML = "Você tem mais sorte no jogo";
+        }
+        cont_baralho = 0;
+        cont_coracao = 0;
+    }
+</script>

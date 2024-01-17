@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15</title>
+</head>
+<body>
+    <h3>Números Favoritos</h3>
+
+    <button onclick="calcular()">Curto 3 e 5</button> <br><br>
+    <div id="msg_curtir"></div>
+
+</body>
+</html>
+<script>
+    function calcular(){
+        msg_curtir.innerHTML = '';
+
+        for (var contador = 1; contador <= 100;contador++){
+            var mult_3 = contador % 3 == 0;
+            var mult_5 = contador % 5 == 0;
+
+
+            if(mult_3 && mult_5){
+                msg_curtir.innerHTML += `<b>É TRI! É PENTA!</b> <br>`;
+            }else if(mult_3){
+                msg_curtir.innerHTML += `<b>É TRI!</b> <br>`;
+            } else if (mult_5){
+                msg_curtir.innerHTML += `<b>É PENTA!</b> <br>`;
+            } else if (!mult_3 && !mult_5){ // Nessa linha de código não precisava colocar um IF, mas para fins didáticos e porque o exercício pediu eu coloquei.
+                msg_curtir.innerHTML += `${contador} <br>`;
+            }
+        }
+    }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex_4</title>
+</head>
+<body>
+    <h3>Cálculas simples</h3>
+
+    Nota 1: <input id="nota1"> <br>
+    Nota 2: <input id="nota2"> <br>
+    <br>
+    <button onclick="media_nota()">Calcular Média</button>
+    
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function media_nota() { 
+       var media = (Number(nota1.value) 
+                    + Number(nota2.value))/2;
+
+       div_resultado.innerHTML = `
+       Sua média foi de <b> ${media} </b>`;
+    }
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    
+    <h3>Números</h3>
+
+    Digite um Número : <input id="num_escolhido"> <br> <br>
+    <button onclick="div_7()">É divisível por 7?</button>
+
+    <div id="msg1"></div>
+    <div id="msg2"></div>
+</body>
+</html>
+<script>
+    function div_7(){
+        var numero = Number(num_escolhido.value);
+        var calculo = numero %7;
+        
+        if(calculo == 0) {
+            alert('Sim, é.');
+        } else {
+            alert('Não, não é.'); 
+        }
+    }
+</script>

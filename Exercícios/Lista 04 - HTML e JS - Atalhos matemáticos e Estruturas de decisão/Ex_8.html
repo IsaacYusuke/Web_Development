@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex_8 DESAFIO</title>
+</head>
+<body>
+   
+    <h3>Situação de compra de um carro financiado</h3>
+
+    Carro à vista: <br>
+    <input placeholder="Valor do carro à vista" id="carro_vista"> <br>
+    Taxa de Juros (mês):  <br>
+    <input placeholder="Valor dos juros ao mês" id="juros_mes"> <br>
+    Parcelas: <br>
+    <input placeholder="Quantidade de parcelas" id="quant_parcelas"> <br>
+
+    <button onclick="calculo_financiamento()">Calcular Prejú</button>
+
+    <div id="mensagem_financiamento"></div>
+
+</body>
+</html>
+
+<script>
+
+    function calculo_financiamento(){
+        var valor_parcelas = Number(carro_vista.value)/ Number(quant_parcelas.value);
+        var valor_juros = Number(valor_parcelas) * ( Number(juros_mes.value) ** ( Number(quant_parcelas.value) -1) );
+        var total_pago = valor_juros + Number(carro_vista.value);
+
+        var carro_vista_menos_20 = Number(carro_vista.value)*0.8; 
+
+        var quant_carros = total_pago / carro_vista.value;
+
+        mensagem_financiamento.innerHTML = `
+        Seu carro vai sair por um total de <b>${total_pago.toFixed(2)}</b>. <br>
+        Após 1 mês, ele já vai valer só <b>R$ ${carro_vista_menos_20.toFixed(2)}</b>. <br>
+        Porque comprou financiado, vai pagar o correspondente a <b>${quant_carros.toFixed(1)}</b> carros.`;
+    }
+
+</script>

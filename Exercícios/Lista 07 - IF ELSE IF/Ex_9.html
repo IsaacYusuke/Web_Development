@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9 - Desafio</title>
+</head>
+<body>
+
+    <h3>Avaliação de Atendimento</h3>
+    
+    <button onclick="nota1()">Nota 1</button>
+    <button onclick="nota2()">Nota 2</button>
+    <button onclick="nota3()">Nota 3</button>
+    <button onclick="nota4()">Nota 4</button>
+    <button onclick="nota5()">Nota 5</button>
+    <br>
+
+    <h3>
+    Sua Avaliação é: <b id="media"></b>
+    </h3>
+    
+    <img id="img_emocao" width="300px">
+    
+</body>
+</html>
+<script>
+    var cliques = 0;
+    var soma_notas = 0;
+
+function nota_final() { 
+    cliques++;
+
+    var total = soma_notas / cliques;
+    media.innerHTML = total.toFixed(1);
+
+    if(total < 2){
+        img_emocao.src = 'triste.jpg';
+    }else if(total <= 3){
+        img_emocao.src = 'neutra.jpg';
+    }else if(total <= 4.5){
+        img_emocao.src = 'feliz.jpg';
+    }else {
+        img_emocao.src = 'super_feliz.jpg';
+    }
+}
+
+    function nota1(){
+        soma_notas += 1;
+       nota_final()
+    }
+    function nota2(){
+        soma_notas += 2;
+       nota_final()
+    }
+    function nota3(){
+        soma_notas += 3;
+       nota_final()
+    }
+    function nota4(){
+        soma_notas += 4;
+       nota_final()
+    }
+    function nota5(){
+        soma_notas += 5;
+       nota_final();
+    }
+</script>

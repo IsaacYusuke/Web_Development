@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+
+    <h3>Sorteio de Dados</h3>
+ 
+    <button onclick="jog_dado_1()">Jogador 1 Jogar Dadinho</button> <br>
+    <div id="msg_jog_1"></div> <br>
+    <button onclick="jog_dado_2()">Jogador 2 Jogat Dadinho</button> <br>
+    <div id="msg_jog_2"></div> <br>
+
+    <div id="msg_resultado"></div>
+
+</body>
+</html>
+<script>
+    
+    var dado1 = 0;
+    var dado2 = 0;
+
+    function jog_dado_1(){
+        dado1 = parseInt(Math.random() * 6) + 1;
+        msg_jog_1.innerHTML = dado1;
+
+        resultado()
+    }
+    function jog_dado_2(){
+        dado2 = parseInt(Math.random() * 6) + 1;
+        msg_jog_2.innerHTML = dado2;
+    
+        resultado()
+    }
+
+    function resultado(){
+    if (dado1 > dado2){
+        msg_resultado.innerHTML = "Jogador 1 venceu";
+    } else if (dado2 > dado1){
+        msg_resultado.innerHTML = "Jogador 2 venceu";
+    } else {
+        msg_resultado.innerHTML = "Empate";
+    }
+}
+
+
+
+</script>

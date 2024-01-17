@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex_6</title>
+</head>
+<body>
+    
+    <h3>Cálculo de Raiz</h3>
+
+    Digite um número: <input id="num_1"> <br>
+    Digite um número: <input id="num_2"> <br>
+
+    <button onclick="calculo_raiz()">Calcular Raiz</button>
+
+    <div id="mensagem_raiz"></div>
+
+</body>
+</html>
+
+<script>
+    function calculo_raiz() {
+        var raiz = Number(num_1.value) ** (1/Number(num_2.value));
+
+        mensagem_raiz.innerHTML = 
+        `a ${num_2.value}ª raiz de ${num_1.value} dá ${raiz}`
+    }
+</script>

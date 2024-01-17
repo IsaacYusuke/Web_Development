@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+<body>
+    
+    <h3>História Email</h3>
+
+    Informe o valor de um ano: <br>
+    <input id="valor_ano"> <br>
+    
+    <button onclick="mostrar_fato()">Ver fato</button>
+    
+    <div id="msg_fato"></div>
+
+</body>
+</html>
+<script>
+    function mostrar_fato(){
+            
+    var numero_ano = Number(valor_ano.value);
+
+        if (numero_ano < 1965){
+            msg_fato.innerHTML = `No ano ${numero_ano} o email nem havia sido criado ainda ...`;
+        }
+        if (numero_ano == 1965){
+            msg_fato.innerHTML = `No ano ${numero_ano} o email estava sendo criado ... `;
+        }
+        if (numero_ano > 1965){
+            if(numero_ano <= 1969)
+            msg_fato.innerHTML = `No ano ${numero_ano} o email já havia sido criado ... `;
+        
+            if (numero_ano > 1969)
+            msg_fato.innerHTML = `No ano ${numero_ano} o email já havia sido aprimorado - Poderia ser enviado para outro computador ... `;
+        
+        }
+    }
+</script>

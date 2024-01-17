@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    <h3>Verificador de Nome</h3>
+
+    Digite seu Nome: <input id="nome" onkeyup="analisar()"> <br>
+    <div id="msg_nome"></div>
+
+</body>
+</html>
+<script>
+    function analisar(){
+    let valor_nome = nome.value;
+    let tem_espaco = valor_nome.trimStart().trimEnd();
+
+    let tem_fogo = valor_nome.indexOf('fogo');
+    msg_nome.innerHTML ='';
+    
+    
+    if (tem_espaco){
+        msg_nome.innerHTML = 'Nome OK';
+    } else {
+        msg_nome.innerHTML = 'Nome deve ser informado!';
+    }
+    if (tem_fogo > 0){
+        msg_nome.innerHTML = 'Com fogo não se brinca!';
+    } 
+    
+}
+</script>

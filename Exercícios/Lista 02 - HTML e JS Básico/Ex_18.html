@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex_18</title>
+</head>
+<body>
+
+<div id="escudos">
+    <img onclick="sao_paulo()" src="sao_paulo.jpg" width="150px">
+    <img onclick="palmeiras()" src="palmeiras.png" width="150px">
+    <img onclick="santos()" src="santos.png" width="150px">
+    <img onclick="corinthians()" src="corinthians.png" width="150px"> 
+</div>
+
+<button id="btn_resetar" onclick="resetar()">Resetar Programa</button>
+<button id="btn_esconder" onclick="esconder()">Esconder Escudos</button>
+<button id="btn_mostrar" onclick="mostrar()"style="display: none">Mostrar Escudos</button>
+
+<br>
+
+<img id="trofeu1" width="100px">
+<img id="trofeu2" width="100px">
+<img id="trofeu3" width="100px">
+<img id="trofeu4" width="200px">
+
+</body>
+</html>
+
+<script>
+    function sao_paulo() {
+        trofeu1.src = 'trofeu.jpg';
+        trofeu2.src = 'trofeu.jpg';
+        trofeu3.src = 'trofeu.jpg';
+        trofeu4.src = '';
+    }
+    function palmeiras() {
+        trofeu1.src = '';
+        trofeu2.src = '';
+        trofeu3.src = '';
+        trofeu4.src = 'mondial.jpg';
+    }
+    function santos() {
+        trofeu1.src = 'trofeu.jpg';
+        trofeu2.src = 'trofeu.jpg';
+        trofeu3.src = '';
+        trofeu4.src = '';
+    }
+    function corinthians () {
+        trofeu1.src = 'trofeu.jpg';
+        trofeu2.src = 'trofeu.jpg';
+        trofeu3.src = '';
+        trofeu4.src = '';
+    }
+    function resetar() {
+        trofeu1.src = '';
+        trofeu2.src = '';
+        trofeu3.src = '';
+        trofeu4.src = '';
+    }
+    function esconder() {
+        escudos.style.display = 'none';
+        btn_resetar.style.display = 'none';
+        btn_esconder.style.display = 'none';
+        btn_mostrar.style.display = 'block'
+    }
+    function mostrar() {
+        escudos.style.display = 'block';
+        btn_resetar.style.display = 'block';
+        btn_esconder.style.display = 'block';
+        btn_mostrar.style.display = 'none';
+    }
+</script>

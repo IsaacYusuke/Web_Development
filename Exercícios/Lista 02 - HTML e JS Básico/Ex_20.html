@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex_19</title>
+</head>
+<body>
+    <h3>Dragon Ball Z</h3>
+
+    <div id="imagem">
+    </div>
+
+        <img id="guerreiro_" scr="guerreiro_sayajin.pnj" height="100px" style="display: block;"> 
+        <img scr="ssj.pnj" height="100px" style="display: none"> 
+        <img scr="ssj2.pnj"  height="100px" style="display: none"> 
+        <img scr="ssj3.pnj" height="100px" style="display: none"> 
+
+    <p>ki base do Guerreiro Sayajin: 2000</p>   
+    <div id="transformar">
+    </div>
+
+     <button onclick="ssj()" >Transformar em SSJ</button> 
+     <button onclick="ssj2()" >Transformar em SSJ2</button> 
+     <button onclick="ssj3()">Transformar em SSJ3</button> <br> <br>
+     <button onclick="voltar()" >Voltar para forma base</button>
+      
+</body>
+</html>
+
+<script>
+    function ssj(){
+        transformar.innerHTML = '<span style="color: darkblue;">ki na forma SSJ: 100000</span>';
+        transformar.style.display = 'block';
+        imagem.guerreiro_sayajin.scr = 'none';
+        imagem.ssj.scr = 'block';
+        imagem.ssj2.style.display = 'block';
+
+
+    }
+
+    function ssj2(){
+        transformar.innerHTML = '<span style="color: yellow;background-color: blue;">ki na forma SSJ: 200000</span>';
+        transformar.style.display = 'block';
+    }
+
+    function ssj3(){
+        transformar.innerHTML = '<span  style="color: orange;background-color: yellow;">ki na forma SSJ: 400000</span>';
+        transformar.style.display = 'block';
+    }
+
+    function voltar(){
+        transformar.style.display = 'none';
+    }
+
+</script>

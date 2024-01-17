@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <h3>Filmes de Super-Heróis</h3>
+
+    Escolha o que você prefere:
+    <select id="tipo_heroi">
+        <option value="0">Marvel</option>
+        <option value="1">DC</option>
+    </select>
+    <br> <br>
+
+    <button onclick="calcular()">Ver programação semanal da TV</button>
+    <br> <br>
+
+    <div id="msg_filme"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        let hq_escolhido = Number(tipo_heroi.value);
+        let contador;
+
+        for(contador = 1;contador <= 5;contador++){
+            let num_sorteado = parseInt(Math.random()*2);
+
+            if(num_sorteado == hq_escolhido){
+                break;
+            }
+        }
+        if(contador <= 5){
+            msg_filme.innerHTML = `Você verá um filme que gosta no ${contador}º dia.`;
+        } else {
+            msg_filme.innerHTML = `É, ou lê um livro ou assiste um filme que não gosta mesmo`;
+        }
+    }
+</script>

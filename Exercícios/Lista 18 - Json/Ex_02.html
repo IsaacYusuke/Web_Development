@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h2>Comparção de Times</h2>
+
+    <h3>Time 1</h3>
+    Nome do Time: <input id="nome1"> <br>
+    Número de Vitórias: <input id="vitorias1"> <br>
+    Número de Empates: <input id="empates1"> <br>
+    Número de Derrotas: <input id="derrotas1"> <br>
+
+    <h3>Time 2</h3>
+    Nome do Time: <input id="nome2"> <br>
+    Número de Vitórias: <input id="vitorias2"> <br>
+    Número de Empates: <input id="empates2"> <br>
+    Número de Derrotas: <input id="derrotas2"> <br>
+    <br>
+    <button onclick="calcular()">Comparar Campanhas</button>
+    <br> <br> 
+    <div id="msg_time"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        let time1 = {
+            valor_nome: nome1.value,
+            num_vitorias: Number(vitorias1.value),
+            num_empates: Number(empates1.value),
+            num_derrotas: Number(derrotas1.value)
+        }
+        let time2 = {
+            valor_nome: nome2.value,
+            num_vitorias: Number(vitorias2.value),
+            num_empates: Number(empates2.value),
+            num_derrotas: Number(derrotas2.value)
+        }
+
+        let pontos_time1 = (time1.num_vitorias * 3) + 
+            (time1.num_empates * 1) + (time1.num_derrotas * 0);
+
+        let pontos_time2 = (time2.num_vitorias * 3) + 
+            (time2.num_empates * 1) + (time2.num_derrotas * 0);
+
+        msg_time.innerHTML = `O time <b>${time1.valor_nome}</b> 
+        terminou o campeonato com <b>${pontos_time1}</b> pontos.`;
+        msg_time.innerHTML += `<br> O time <b>${time2.valor_nome}</b> 
+        terminou o campeonato com <b>${pontos_time2}</b> pontos.`;
+    }
+</script>

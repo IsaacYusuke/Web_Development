@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex_13</title>
+</head>
+<body>
+
+    <h1>BrasilXAlemanha</h1>
+
+    <p>
+    <button onclick="brasil()">Gol do Brasil</button>
+    <button onclick="alemanha()">Gol da Alemanha</button>
+    <button onclick="recomecar()">Recomeçar Partida</button>
+
+    </p>
+    <h2><b>Tempo real do jogo!</b></h2>
+    <div id="div_acontecimento">
+
+    </div>
+
+</body>
+</html>
+
+<script>
+function brasil() {
+    div_acontecimento.innerHTML += '<span style="color: green"> Goooolll do BRASIIIIIIIIIIIL!</span> <br>';
+}
+
+function alemanha() {
+    div_acontecimento.innerHTML += '<span style= "background-color:red; color: yellow">Goooolll DA ALEMANHAAA! (chupa brasil) </span> <br>';
+}
+
+function recomecar() {
+    div_acontecimento.style.display = 'none';
+}
+
+</script>

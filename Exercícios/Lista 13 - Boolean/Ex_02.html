@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h3>Acesso ao Usuario</h3>
+
+    Login: <input id="login"> <br>
+    Senha: <input id="senha"> <br>
+    <button onclick="verificar_Usuario()">Entrar</button>
+
+    <div id="msg_usuario"></div>
+
+</body>
+</html>
+<script>
+    function verificar_Usuario(){
+        var nome_login = login.value;
+        var nome_senha = senha.value;
+
+        var check_login = nome_login == "aidimin";
+        var check_senha = nome_senha == "seinha";
+
+        msg_verificar = '';
+
+        if(check_login && check_senha){
+            msg_verificar = `<span style="color: blue">Usuário autenticado com sucesso!</span>`;
+        } else {
+            if(!check_login){
+                msg_verificar = `<span style="color: red">Seu login está inválido!</span> <br>`;
+            }
+            if(!check_senha){
+                msg_verificar += `<span style="color: red">Sua senha está inválida!</span>`;
+                alert('Entre em contato com o suporte para recuperar sua senha');
+            }
+        }
+        msg_usuario.innerHTML = msg_verificar;
+    }
+</script>

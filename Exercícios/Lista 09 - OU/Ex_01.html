@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    
+    <h3>Direito do Governo</h3>
+
+    Informe sua renda: <br>
+    <input id="renda"> <br>
+
+    Informe a renda total familiar: <br>
+    <input id="renda_familia"> <br>
+
+    <button onclick="calcular_ajuda()">Terei o benefício?</button>
+
+    <div id="msg_ajuda"></div>
+
+</body>
+</html>
+<script>
+    function calcular_ajuda(){
+        var renda_individual = Number(renda.value);
+        var total_renda = Number(renda_familia.value);
+
+        if (renda_individual <= 2000 || total_renda <= 3000){
+            msg_ajuda.innerHTML = "Você terá direito ao auxílio";
+        } else {
+            msg_ajuda.innerHTML = "Sem direito ao auxílio";
+        }
+    }
+
+</script>

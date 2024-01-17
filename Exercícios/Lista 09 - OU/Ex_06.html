@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Desafio</title>
+</head>
+<body>
+    
+    <h3>Analisar o Arroz</h3>
+
+    Selecione o tipo de arroz:
+    <select id="arroz">
+        <option value="1">Branco</option>
+        <option value="2">Integral</option>
+    </select> <br>
+
+    Informe o tempo de cozimento: (Minutos) <br>
+    <input id="tempo"> <br>
+
+    Informe a quantidade de sal usada: (Gramas)<br>
+    <input id="sal"> <br>
+
+    <button onclick="avaliar()">Avaliar arroz</button>
+
+    <div id="msg_arroz"></div>
+    <img id="img_arroz" width="300px">
+
+</body>
+</html>
+<script>
+    function avaliar(){
+        var nome_arroz = Number(arroz.value);
+        var num_tempo = Number(tempo.value);
+        var gramas = Number(sal.value);
+
+        if ((nome_arroz == 1 && num_tempo == 10 && gramas <= 10) ||
+            (nome_arroz == 2 && num_tempo == 20 && gramas <= 15)){
+
+        if (nome_arroz == 1) {
+            msg_arroz.innerHTML = `Arroz perfeito`;
+            img_arroz.src = 'arroz_branco.jpg';
+
+        } else if (nome_arroz == 2) {
+            msg_arroz.innerHTML = `Arroz perfeito`;
+            img_arroz.src = 'arroz_integral.jpg';
+            }
+        } else{
+            msg_arroz.innerHTML = `Seu arroz não está perfeito`;
+            img_arroz.src = 'jac_bravo.jpg';
+        }
+    }
+
+</script>

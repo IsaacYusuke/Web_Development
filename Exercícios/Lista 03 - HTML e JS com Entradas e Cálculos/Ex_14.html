@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercício 14</title>
+</head>
+<body>
+
+    Quantidade de votos de Zé Buduia: <input id="ze"> <br>
+    Quantidade de votos de Maria Bigodenha: <input id="maria"> <br>
+    Quantidade de votos brancos: <input id="brancos"> <br>
+    Quantidade de votos nulos: <input id="nulos"> <br>
+    <br>
+    <button onclick="resultado()">Resultado da Eleição</button>
+    
+    <div id="div_total_votos"></div>
+    <div id="div_ze"></div>
+    <div id="div_maria"></div>
+    <div id="div_invalidos"></div>
+
+</body>
+</html>
+
+<script>
+    function resultado() { 
+       var total_votos = Number(ze.value) + Number(maria.value) + Number(brancos.value) + Number(nulos.value);
+
+       var var_ze =  (Number(ze.value)*100 )/ total_votos;
+
+       var var_maria =  (Number(maria.value)*100 )/ total_votos;
+
+       var invalidos = Number(brancos.value) + Number(nulos.value);
+       var invalidosPorcentagem = (invalidos*100) / total_votos;
+
+       div_total_votos.innerHTML = `<b>Total de votos: <u>${total_votos} </u></b>`;
+       div_ze.innerHTML = `<b>Zé Ruela:</b> ${var_ze}% (${ze.value} votos)`;
+       div_maria.innerHTML = `<b>Maria Bigodenha:</b> ${var_maria}% (${maria.value} votos)`;
+       div_invalidos.innerHTML = `<b>Inválidos:</b> ${invalidosPorcentagem}% (${invalidos} votos)`;
+
+    }
+
+
+</script>

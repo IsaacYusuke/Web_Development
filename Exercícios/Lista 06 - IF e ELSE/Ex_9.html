@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    
+    <h3>Tempo do Arroz</h3>
+
+    Tempo que deixou o arroz cozinhar: <br>
+    <input id="tempo_arroz" placeholder="Coloque em minutos"> <br>
+
+    <button onclick="provar_arroz()">Provar arroz</button> <br>
+    <div id="msg_arroz"></div> <br>
+    <img id="img_arroz" width="300px">
+
+</body>
+</html>
+<script>
+    function provar_arroz(){
+        var minutos_arroz = Number(tempo_arroz.value);
+
+        if(minutos_arroz == 5) {// 5 minutos = Arroz Bom
+        msg_arroz.innerHTML = "Parabéns! Arroz perfeito!";
+        img_arroz.src = "arroz_bom.png";
+        } else {
+            msg_arroz.innerHTML = "Arroz cru ou cozido demais!";
+            img_arroz.src = "arroz_queimado.jpg"; 
+        }
+    }
+</script>

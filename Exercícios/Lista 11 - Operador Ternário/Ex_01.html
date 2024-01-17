@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    
+    <h3>Sistema AutoEscola</h3>
+
+    Infome seu nome: <br>
+    <input id="nome"> <br>
+
+    Infome seu idade: <br>
+    <input id="idade"> <br>
+
+    <button onclick="avaliar_aluno()">Avaliar aluno</button>
+
+    <div id="msg_auto_escola"></div>
+</body>
+</html>
+<script>
+    function avaliar_aluno(){
+        var valor_idade = Number(idade.value);
+        var valor_nome = nome.value;
+        var mensagem;
+
+        mensagem = (valor_idade >= 18) ? 
+        `${valor_nome} vamos tirar a CNH?` :
+        `${valor_nome} vai jogar PlayStation!`;
+
+        msg_auto_escola.innerHTML = mensagem;
+        
+    }
+</script>

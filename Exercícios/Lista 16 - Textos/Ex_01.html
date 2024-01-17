@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <h3>E-mail Verificação</h3>
+
+    Digite seu e-mail: <input id="email" onkeyup="analisar()"> <br>
+    <div id="msg_email"></div>
+
+</body>
+</html>
+<script>
+    function analisar(){
+    var tem_arroba = email.value;
+    tem_arroba = tem_arroba.indexOf('@') > -1;
+    msg_email.innerHTML ='';
+
+    if (!tem_arroba){
+        msg_email.innerHTML = 'Email inválido';
+    } else if (tem_arroba){
+        msg_email.innerHTML = 'Email válido';
+    }
+    
+    
+}
+</script>

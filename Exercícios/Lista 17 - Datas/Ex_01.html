@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <h3>Idade</h3>
+
+    Digite sua data de nascimento: <input placeholder="mm/dd/aaaa" id="data_nasc">
+    <br>
+    <button onclick="calcular()">Ver Idade Atual</button>
+    <br> <br>
+    
+    <div id="msg_idade"></div>
+
+</body>
+</html>
+<script>
+    function calcular(){
+       let valor_nasc = new Date (data_nasc.value);
+       let agora = new Date();
+       let idade_atual = agora - valor_nasc;
+       idade_atual = parseInt(idade_atual/1000/60/60/24/365);
+
+       msg_idade.innerHTML = `${idade_atual} anos.`;
+    }
+</script>

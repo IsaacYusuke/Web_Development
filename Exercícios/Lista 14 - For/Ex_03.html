@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h3>Contagem Progressiva</h3>
+
+    <button onclick="calcular()">Conte de 0 a 150</button><br>
+    <div id="msg_contagem"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        msg_contagem.innerHTML = '';
+        
+        for(var contador = 1; contador <= 150; contador++){
+            msg_contagem.innerHTML += `${contador} <br>`;
+        }
+    }
+</script>

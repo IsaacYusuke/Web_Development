@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+<body>
+    <h3>Verificador de Nome</h3>
+
+    Digite seu Nome: <input id="nome" onkeyup="analisar()"> <br>
+    <div id="msg_nome"></div>
+
+</body>
+</html>
+<script>
+    function analisar(){
+    var tem_10_caract = nome.value;
+    tem_10_caract = tem_10_caract.length >= 10;
+    msg_nome.innerHTML ='';
+
+    if (!tem_10_caract){
+        msg_nome.innerHTML = 'Nome deve ter pelo menos 10 letras';
+    } else if (tem_10_caract){
+        msg_nome.innerHTML = 'Nome OK';
+    }
+    
+    
+}
+</script>

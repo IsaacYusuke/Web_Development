@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    
+    <h3>Clima Ambiente</h3>
+
+    Informe a temperatura do ambiente: <br>
+    <input id="temperatura" placeholder="Só o num. em °C"> <br>
+
+    <button onclick="verificar_clima()">Verificar Clima</button> <br>
+    <img id="img_comida" width="300px">
+    <div id="msg_comida"></div>
+
+</body>
+</html>
+<script>
+    function verificar_clima(){
+        valor_temp = Number(temperatura.value);
+
+        if(valor_temp < 10) {// Menor que 10°C
+        img_comida.src = 'comida_bom_estado.jpg';
+        msg_comida.innerHTML = `Apropriada p/ conservar alimento`;
+        } else { // Valor de 10°C ou maior
+            img_comida.src = 'comida_estragada.jpg';
+            msg_comida.innerHTML = `Inapropriada p/ conservar alimento`;
+        }
+    }   
+</script>

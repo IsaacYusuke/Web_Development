@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 5</title>
+</head>
+<body>
+
+    <h3>Calcule a Potência</h3>
+
+    Digite um número a ser elevado: <input id="num_base"> <br>
+    Digite o valor da potência: <input id="num_potencia"> <br>
+
+    <button onclick="calcular_potencia()">Fazer Potência</button>
+
+    <div id="mensagem_potencia"></div>
+    
+</body>
+</html>
+<script>
+
+function calcular_potencia() {
+    var potencia = Number(num_base.value)**Number(num_potencia.value);
+
+    mensagem_potencia.innerHTML = 
+    `${num_base.value} elevado a ${num_potencia.value} dá ${potencia}`;
+}
+</script>

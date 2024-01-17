@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex_5</title>
+</head>
+<body>
+    <h3>Cálculas simples</h3>
+
+    Valor da passagem de ônibus: <input id="passagem"> <br>
+    Quantidade de viagens por mês: <input id="viagens"> <br>
+    <br>
+    <button onclick="calcular()">Calcular VT</button>
+    
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function calcular() { 
+       var resultado = Number(passagem.value) 
+                    * Number(viagens.value);
+
+       div_resultado.innerHTML = `Você vai gastar R$ 
+       <b>${resultado}</b> por mês com ônibus`;
+    }
+
+</script>

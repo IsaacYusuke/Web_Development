@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    <h3>Frases</h3>
+
+    Digite uma frase: <input id="frase" onkeyup="analisar()"> <br>
+    <div id="msg_frase"></div>
+
+</body>
+</html>
+<script>
+    function analisar(){
+    let valor_frase = frase.value;
+    let num_total_frase = valor_frase.length;
+    let contador = 0;
+    msg_frase.innerHTML = '';
+
+    while (contador < num_total_frase){
+    msg_frase.innerHTML += `${valor_frase[contador]} <br>`;
+    contador++;
+    }
+}
+</script>

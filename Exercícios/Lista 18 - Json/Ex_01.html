@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <h3>Pontuação do Seu Time</h3>
+
+    Número de Vitórias: <input id="vitorias"> <br>
+    Número de Empates: <input id="empates"> <br>
+    Número de Derrotas: <input id="derrotas"> <br>
+
+    <button onclick="calcular()">Analisar Campanha</button>
+    <br> <br> 
+    <div id="msg_time"></div>
+</body>
+</html>
+<script>
+    function calcular(){
+        let time = {
+            num_vitorias: Number(vitorias.value),
+            num_empates: Number(empates.value),
+            num_derrotas: Number(derrotas.value)
+        }
+        let total_pontos = (time.num_vitorias * 3) + 
+            (time.num_empates * 1) + (time.num_derrotas * 0);
+
+        msg_time.innerHTML = `O seu time terminou o campeonato com <b>${total_pontos}</b> pontos.`;
+
+    }
+</script>

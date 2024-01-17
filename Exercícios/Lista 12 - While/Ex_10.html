@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <h3>Rotina para Academia</h3>
+
+    De quantos em quantos dias você faz musculação: <br>
+    <input id="dias" placeholder="Número de dias"> <br>
+
+    <button onclick="resultado()">Exibir rotina mensal</button> <br><br>
+    <div id="msg_academia"></div>
+
+</body>
+</html>
+<script>
+    
+    function resultado(){
+        var num_dias = Number(dias.value);
+        var contador = 0;
+        
+        msg_academia.innerHTML = '';
+
+        while (contador < 30){
+            contador++;
+
+            if (contador % num_dias == 1){
+                msg_academia.innerHTML += `Dia ${contador} - <b>Musculação</b> <br>`;
+            }else{
+                msg_academia.innerHTML += `Dia ${contador} - Comer, dormir etc <br>`;
+            }
+        }
+    }
+    
+</script>

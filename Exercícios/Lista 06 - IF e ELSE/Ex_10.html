@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 10 - Desafio</title>
+</head>
+<body>
+    
+    <h3>Desempenho do Atacante</h3>
+
+    Quantas partidas o Atacante jogou: <br>
+    <input id="total_partidas"> <br>
+
+    Gols marcados pelo Atacante: <br>
+    <input id="gols_marcados"> <br>
+
+    <button onclick="estudar_atacante()">Estudar atacante</button> <br>
+    <div id="msg_jogador"></div> <br>
+    <img id="img_jogador" width="300px"> <br>
+    <div id="msg_media_jogador"></div>
+
+</body>
+</html>
+<script>
+    function estudar_atacante(){
+        var resultado_atacante = Number(gols_marcados.value) / Number(total_partidas.value);
+
+        if(resultado_atacante < 0.2) {
+            img_jogador.src = "jogador_ruim.jpg";
+            msg_jogador.innerHTML = "Melhor mudar de posição";
+        } 
+        if (resultado_atacante >= 0.2){
+            if(resultado_atacante <= 0.6)
+            img_jogador.src = "jogador_normal.jpg"; 
+            msg_jogador.innerHTML = "Atacante mediano";
+        }
+        if (resultado_atacante > 0.6){
+            img_jogador.src = "jogador_lenda.jpg"; 
+            msg_jogador.innerHTML = "Atacante de futuro";
+        }
+
+        msg_media_jogador.innerHTML = `<b>Sua média de gols/partida é de ${resultado_atacante.toFixed(2)}.</b>`
+    }
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    
+<h3>Proposta de Casamento</h3>
+
+    Informe o tempo, em anos, que ele trabalhou para o pai da pretendente: <br>
+    <input id="tempo"> <br>
+
+    Informe a quantidade, em kilos, de trigo, que suas plantações renderam: <br>
+    <input id="trigo"> <br>
+
+    Informe o total de dias que ele faltou ao trabalho por estar doente: <br>
+    <input id="faltou"> <br>
+
+    <button onclick="match()">Deu match?</button> <br>
+    <div id="msg_casamento"></div> <br> 
+    <img id="img_casamento" width="300px">
+
+</body>
+</html>
+<script>
+    function match(){
+        var total_tempo = Number(tempo.value);
+        var total_trigo = Number(trigo.value);
+        var total_faltas = Number(faltou.value);
+
+        if (total_tempo >= 5 && total_trigo >= 300 && total_faltas <= 5){
+            msg_casamento.innerHTML = "Minha filha será sua!";
+            img_casamento.src = 'noiva.png';
+        } else {
+            msg_casamento.innerHTML = "Deu ruim! Trabalhe mais 2 anos";
+            img_casamento.src = 'pai_bravo.jpg';
+        }
+
+
+
+    }
+</script>

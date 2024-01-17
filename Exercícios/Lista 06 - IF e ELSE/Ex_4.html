@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    
+    <h3>Controle de Peso para Elevador</h3>
+
+    Quantidade de homens no elevador: <br>
+    <input id="homem_elevador"> <br>
+
+    Quantidade de Mulheres no elevador: <br>
+    <input id="mulher_elevador"> <br>
+
+    <button onclick="analisar_peso()">Analisar conta</button> <br>
+
+    <div id="msg_elevador"></div>
+    
+</body>
+</html>
+
+<script>
+    function analisar_peso(){
+        var peso_homem = Number(homem_elevador.value) * 80;
+        var peso_mulher = Number(mulher_elevador.value) * 60;
+        var peso_total = peso_homem + peso_mulher;
+
+        if (peso_total > 800){
+            msg_elevador.innerHTML = `
+            Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${peso_total.toFixed(2)}Kg. <br>
+            <span style="color: blue;">Será necessário descer alguém para que o elevador se movimente.</span>`;
+        } else {
+            msg_elevador.innerHTML =`Elevador pode partir`;
+        }
+
+    }
+</script>

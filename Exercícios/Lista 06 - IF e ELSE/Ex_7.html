@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    
+    <h3>Escola</h3>
+
+    Frequencia do Aluno: <br>
+    <input id="freq_aluno" placeholder="Em %"> <br>
+
+    <button onclick="analisar_freq()">Analisar frequência</button> <br>
+    <img id="img_freq" width="150px">
+
+</body>
+</html>
+<script>
+    function analisar_freq(){
+        var freq_analisada = Number(freq_aluno.value);
+
+        if (freq_analisada < 50){
+            img_freq.src = 'turista.jpg';
+        } else {
+            img_freq.src = 'aluno_estudioso.jpg';
+        }
+    }
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+<body>
+    <h3>Time do Coração</h3>
+
+    <button onclick="resultado()">Amo o escudo do meu time!</button> <br>
+    <div id="img_time"></div>
+
+</body>
+</html>
+<script>
+    var contador = 0;
+
+    function resultado(){
+        while (contador < 7){
+            img_time.innerHTML += '<img src="escudo.png" width="120px">';
+            contador++;
+        }
+    }
+</script>

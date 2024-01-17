@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <h3>Maior Amor da Vida</h3>
+
+    Digite o nome da pessoa que você mais ama: <br>
+    <input id="amor_maior"> <br>
+
+    Digite quantas vezes ama essa pessoa: <br>
+    <input id="amor_vezes"> <br>
+
+    <button onclick="resultado()">Expressar amor</button> <br>
+    <div id="msg_amor"></div>
+
+</body>
+</html>
+<script>
+    function resultado(){
+        var nome_amor = amor_maior.value;
+        var num_amor = Number(amor_vezes.value);
+        var contador = 0;
+        msg_amor.innerHTML = '';
+
+        while (contador < num_amor){
+            msg_amor.innerHTML += `<b>Lady Gaga</b>, eu te amo! <i>Sempre lembre disso!</i> <br>`;
+            contador++;
+        }
+    }
+</script>

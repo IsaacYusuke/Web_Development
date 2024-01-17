@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    
+    <h3>Teste Vegano</h3>
+
+    Escolha o você come no café da manhâ: 
+    <select id="cafe">
+        <option value="ovos">Ovos</option>
+        <option value="leite">Leite de Arroz</option>
+        <option value="bacon">Bacon</option>
+    </select> <br>
+
+    Escolha o você come no almoço:
+    <select id="almoco">
+        <option value="bife">Bife</option>
+        <option value="hamburguer">Hamburguer de Soja</option>
+        <option value="frango">Frango Grelhando</option>
+    </select> <br>
+
+    Escolha o você come na jantar:
+    <select id="jantar">
+        <option value="picanha">Picanha de Soja</option>
+        <option value="cupim">Cupim</option>
+        <option value="coracao">Coração</option>
+    </select> <br>
+
+    <button onclick="verificar_vegano()">Sou vegano?</button> <br>
+
+    <div id="msg_vegano"></div>
+
+</body>
+</html>
+<script>
+    function verificar_vegano(){
+        var ref_manha = cafe.value;
+        var ref_tarde = almoco.value;
+        var ref_noite = jantar.value;
+
+        if (ref_manha == "leite" &&
+            ref_tarde == "hamburguer" && 
+            ref_noite == "picanha"){
+                
+            msg_vegano.innerHTML = "Sim, você é vegano!";
+
+        } else{
+            msg_vegano.innerHTML = "Não, você não é vegano";
+
+        }
+    
+    }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    
+    <h3>Número Cabalístico</h3>
+
+    <button onclick="numero()">Quero um Cabalístico</button> <br>
+    <div id="msg_numero"></div>
+    <div id="msg_sorteio"></div>
+
+</body>
+</html>
+<script>
+    var sorteio = 0;
+
+    function numero(){
+        sorteio = parseInt(Math.random() *144) +1;
+
+        if (sorteio == 3 || sorteio == 4 ||
+            sorteio == 7 || sorteio == 10 || 
+            sorteio == 12 ||sorteio == 144){
+            
+            msg_sorteio.innerHTML = sorteio;
+            msg_numero.innerHTML = "Eu S2 números cabalísticos!";
+        } else {
+            msg_sorteio.innerHTML = sorteio;
+            msg_numero.innerHTML = "Ah, me dá um número bom na próxima!";
+        }
+    }
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+
+    <h3>Checagem do Auxilio Emergêncial</h3>
+
+    Renda individual: <input id="renda_indiv"> <br>
+    Renda familiar: <input id="renda_familia"> <br>
+
+    <button onclick="calcular()">Analisar auxilio</button> <br>
+    <div id="msg_analise"></div>
+
+</body>
+</html>
+<script>
+    function calcular(){
+        var num_familia = Number(renda_familia.value);
+        var num_indiv = Number(renda_indiv.value);
+
+        var renda_indiv_baixa = num_indiv <= 1200;
+        var renda_familia_baixa = num_familia <= 2500;
+
+        var msg ='';
+
+        if(renda_indiv_baixa && renda_familia_baixa){
+            msg = "Você terá direito ao auxílio!";
+        } else {
+
+            if (!renda_indiv_baixa){
+            msg = `Sua renda individual te impede de receber o auxílio! <br>`;
+            } 
+            if(!renda_familia_baixa) {
+            msg += "Sua renda familiar te impede de receber o auxílio!"; 
+            }
+        }
+        msg_analise.innerHTML = msg;
+    }
+
+</script>

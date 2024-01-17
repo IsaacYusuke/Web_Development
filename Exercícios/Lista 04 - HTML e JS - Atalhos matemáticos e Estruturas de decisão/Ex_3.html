@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex_3</title>
+</head>
+<body>
+    Digite um número: <input id="numero"><br>
+
+    <button onclick="raiz_quadrada()">
+        Exibir sua raiz quadrada</button>
+    <button onclick="raiz_cubica()">
+        Exibir sua raiz cúbica</button>
+
+        <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+    
+    function raiz_quadrada() { 
+        var potencia2 = Number(numero.value) ** 2;
+        mensagem.innerHTML = `A raiz quadrada é: ${potencia2}`;
+    }
+    function raiz_cubica() { 
+        var potencia3 = Number(numero.value) ** 3;
+        mensagem.innerHTML = `A raiz quadrada é: ${potencia3}`;
+    }
+
+
+
+</script>

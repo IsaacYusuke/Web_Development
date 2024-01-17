@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    
+    <h3>Tinder do Zé</h3>
+
+    Escolha a cor do cabelo:
+    <select id="cabelo">
+    <option value="1">Preto</option>
+    <option value="2">Vermelho</option>
+    <option value="3">Amarelo</option>
+    <option value="4">Castanho</option>
+    </select> <br>
+
+    Informe a altura da moça: (Metros)<br>
+    <input id="altura"> <br>
+
+    <button onclick="analisar()">Deu match?</button> 
+    <br>
+
+    <img id="img_match">
+
+</body>
+</html>
+<script>
+    function analisar(){
+        var cor_cabelo = Number(cabelo.value);
+        var num_altura = Number(altura.value);
+
+        if ((cor_cabelo == "1" || cor_cabelo == "2") &&
+            num_altura >= 1.70){
+            img_match.src = 'cara_feliz.jpg';
+
+        } else {
+            img_match.src = 'cara_triste.jpg';
+        }
+    }
+
+
+</script>

@@ -1,0 +1,126 @@
+body {
+	background-color: rgb(210,132,0);
+	background-image: url("Fundo café.png"), url("Fundo café.png");
+	background-repeat: repeat-y, repeat-y;
+	background-position: left, right;
+	background-size: auto;
+	font-family: "Sofia", sans-serif;
+
+}
+
+h1 {
+	margin: auto;
+	width: auto;
+	text-align: center;
+	-border: 2px solid black;
+	font-family: "Sofia", sans-serif;
+	font-size: 80px;
+	padding: 0px 200px; 
+}
+
+h2 {
+	font-size: 50px;
+	/*margin: 0px 0px 0px 200px;*/
+	text-align: center;
+	padding: 0px 200px; 
+}
+
+footer {
+	margin: 0;
+}
+
+
+h3.tipos {
+	width: 178px;
+}
+
+.tipos{
+	order: 1;
+	-flex-grow: 1;
+	-flex-shrink: 1;
+	-flex-basis: 0;
+	flex: 0.4 1 0;
+	align-self: auto;
+	justify-content: space-around;
+	font-size: 25px;
+	border-style: solid;
+	width: 178px;
+	background-color: white;
+	
+}
+
+.sel {
+	order: 1;
+	-flex-grow: 1;
+	-flex-shrink: 1;
+	-flex-basis: 0;
+	flex: 0.4 1 0;
+	align-self: auto;
+	justify-content: space-around;
+	font-size: 25px;
+	border-style: solid;
+	width: 178px;
+	background-color: yellow;
+}
+
+.container{
+	display: flex;
+	-flex-direction: row;
+	-flex-wrap: wrap;
+	flex-flow: row wrap;
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	justify-content: space-around;
+	width: 355px;
+	-padding: 0px 200px; 
+	-margin: auto;
+	
+}
+
+#bloco {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	margin: 0px 150px;
+	background-color: rgb(0,100,0);
+	border: 5px groove red;
+}
+
+#cafés {
+	width: 350px;
+}
+
+#texto{
+	background-color: white;
+	border-style: solid;
+	width: 250px;
+	height: 200px;
+	vertical-align: middle;
+	text-align: center;
+	align-items: center
+}
+
+#descrição{
+	text-align: center;
+	vertical-align: middle;
+	align-self: center;
+
+}
+	
+#imagem{
+	height: 200px;
+	vertical-align: middle;
+}
+	
+#rodapé {
+	text-align: center;
+}
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    
+    <h3 >Tela de Usuário</h3>
+
+    Login: <input id="login"> <br>
+    Senha: <input id="senha"> <br>
+
+    <button onclick="entrar()">Entrar</button>  <br>
+    <div id="msg_usuario"></div>
+
+</body>
+</html>
+<script>
+    function entrar(){
+        var nome_login = login.value;
+        var valor_senha = senha.value;
+
+        if (nome_login == "aidimim" && valor_senha == "seinha"){
+            msg_usuario.innerHTML = `<span style="color: blue;"> Usuário autenticado com sucesso! </span>`
+        } else {
+            msg_usuario.innerHTML = `<span style="color: red;"> Login e/ou senha inválido(s) </span>`;
+        }
+
+    }
+</script>

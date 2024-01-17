@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <h3>Aposentadoria</h3>
+
+    Digite sua idade atual:
+    <input id="idade"><br>
+    Escolha o seu sexo:
+    <select id="sexo">
+        <option value="h">Homem</option>
+        <option value="m">Mulher</option>
+    </select>
+    <br><br>
+
+    <button onclick="calcular()">Simular Aposentadoria</button>
+    <br> <br>
+    
+    <div id="msg_idade"></div>
+
+</body>
+</html>
+<script>
+    function calcular(){
+        let idade_h = 65 - idade.value;
+        let idade_m = 60 - idade.value;
+        let valor_sexo = sexo.value;
+
+        let data_hoje = new Date();
+        let dia_hoje = data_hoje.getDate();
+        let mes_hoje = data_hoje.getMonth() +1;
+        let ano_hoje = data_hoje.getFullYear();
+
+        let homem_aposentar = ano_hoje + idade_h;
+        let mulher_aposentar = ano_hoje + idade_m;
+
+        if(valor_sexo == 'h'){
+            msg_idade.innerHTML = `(Homem) Faltam ${idade_h} anos para se aposentar. Poderá de aposentar em ${dia_hoje}/${mes_hoje}/${homem_aposentar}`;
+        } else{
+            msg_idade.innerHTML = `(Mulher)Faltam ${idade_m} anos para se aposentar. Poderá de aposentar em ${dia_hoje}/${mes_hoje}/${mulher_aposentar}`;
+        }
+        
+    }
+</script>

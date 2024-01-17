@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 11</title>
+</head>
+<body>
+    
+    <h3>Estabilidade Netflix</h3>
+
+    Informe o horário que você acessa a Netflix: <br>
+    <input id="horario" placeholder="Apenas a Hora do dia (24h)"> <br>
+
+    <button onclick="mostrar_recomendacao()">Ver recomendação</button> <br>
+
+    <div id="msg_netflix"></div>
+    
+</body>
+</html>
+
+<script>
+    function mostrar_recomendacao(){
+        var valor_horario = Number(horario.value); 
+
+        msg_netflix.innerHTML = `Não é recomendável que você assista sua série favorita no horário ${valor_horario}h !`;
+        
+        if (valor_horario < 19){ 
+            msg_netflix.innerHTML =`O horário ${valor_horario}h é adequado para assistir sua série favorita!`;
+        }
+        if (valor_horario > 21){ 
+            msg_netflix.innerHTML =`O horário ${valor_horario}h  é adequado para assistir sua série favorita!`;
+        }
+    }
+</script>

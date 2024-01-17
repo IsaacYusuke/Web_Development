@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    
+    <h3>Latas por Ano</h3>
+
+    Quantas latas de refrigerante você toma por dia: <br>
+    <input id="latas_refri_dia"> <br>
+
+    <button onclick="refris_total()">Quantos refris?</button> <br>
+
+    <div id="mensagem_refri"></div>
+    
+</body>
+</html>
+
+<script>
+    function refris_total(){
+        var refri_total_ano = Number(latas_refri_dia.value) *365;
+
+        mensagem_refri.innerHTML =`Você consome ${refri_total_ano} latas de refrigerante por ano.`;
+
+        if (refri_total_ano > 499){
+            mensagem_refri.innerHTML = `
+            Você consome ${refri_total_ano} latas de refrigerante por ano. <br>
+            <span style="color: white; background-color: red;"> Cuidado com a diabetes! </span>`;
+        }
+
+    }
+</script>

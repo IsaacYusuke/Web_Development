@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+<body>
+    
+    <h3>Temperatura Ideal</h3>
+
+    Qual é a Temperatura Atual: <br>
+    <input id="temp_atual"> <br>
+
+    <button onclick="analisar_temp()" placeholder="Em °C">Analisar temperatura</button> <br>
+
+    <div id="msg_temp"></div>
+
+</body>
+</html>
+<script>
+    function analisar_temp(){
+        
+    var valor_temp = Number(temp_atual.value);
+
+    msg_temp.innerHTML = `<b>Temperatura confortável</b>`;
+    
+    if (valor_temp < 22){
+        msg_temp.innerHTML = `<b>Temperatura desconfortável - está frio!</b>`
+    }
+    if (valor_temp > 23){
+        msg_temp.innerHTML = `<b>Temperatura desconfortável - está calor!</b>`
+    }
+}
+
+</script>

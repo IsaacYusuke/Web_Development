@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+
+<body>
+    <h3>Viagens</h3>
+
+    Lugar onde viajou: <br>
+    <input id="lugar">
+    <button onclick="cadastrar()">Cadastrar</button>
+    <br>
+
+    Número da viagem: <br>
+    <input id="num_viagem">
+    <button onclick="relembrar()">Relembrar Viagem</button>
+    <br> <br>
+
+    <div id="msg_num_viagem"></div> <br>
+    <div id="msg_viagem"></div>
+
+</body>
+
+</html>
+<script>
+    let viagens = [];
+
+    function cadastrar() {
+        viagens.push(lugar.value);
+        msg_num_viagem.innerHTML = `Viagens cadastradas: ${viagens.length}` 
+    }
+    function relembrar() {
+        msg_viagem.innerHTML = '';
+        let pesquisa_viagem = Number(num_viagem.value);
+        if (pesquisa_viagem >= 1 && pesquisa_viagem <= viagens.length){
+            let encontrado = viagens[pesquisa_viagem -1]
+            msg_viagem.innerHTML = `Sua viagem foi em <b>${encontrado}</b>`;
+        } else {
+            msg_viagem.innerHTML = `Pesquise entre 1 e ${viagens.length}`
+        }
+    }
+</script>

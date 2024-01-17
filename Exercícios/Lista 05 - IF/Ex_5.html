@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+
+    <h3>Pizzaria</h3>
+
+    Valor da Pizza: <br>
+    <input id="valor_pizza" placeholder="Valor em Reais"> <br>
+
+    Quantidade de Pessoas por conta: <br>
+    <input id="quant_pessoas"> <br>
+
+    <button onclick="pizza_resultado()">Rola a pizza?</button>
+
+    <div id="msg_pizza"></div>
+
+</body>
+</html>
+<script>
+    function pizza_resultado(){
+        var calculo_pizza = Number(valor_pizza.value) / Number (quant_pessoas.value);
+
+        msg_pizza.innerHTML = `<b>Cada amigo vai pagar R$ ${calculo_pizza.toFixed(2)} pela pizza</b>`;
+
+        if (calculo_pizza > 19.99){
+            msg_pizza.innerHTML = `
+            <b>Cada amigo vai pagar R$ ${calculo_pizza.toFixed(2)} pela pizza</b>
+            <b><i style="color: blue;"> Deu ruim! Pizza muito cara! </i></b>`;
+        }
+    }
+</script>

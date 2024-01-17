@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    
+    <h3>Times</h3>
+
+    <select id="times">
+        <option value="sao_paulo">São Paulo</option>
+        <option value="palmeiras">Palmeiras</option>
+        <option value="santos">Santos</option>
+        <option value="corinthians">Corinthians</option>
+    </select> 
+
+    <button onclick="verificar_times()">Fale sobre esse time</button> <br>
+
+    <div id="msg_time"></div>
+
+</body>
+</html>
+<script>
+    function verificar_times(){
+        var time = times.value;
+
+        if (time == "sao_paulo"){
+            msg_time.innerHTML = `
+            <span style="color: red;background-color: black;">
+            Salve o Tricolor paulista</span>`;
+
+        } else if (time == "palmeiras"){
+            msg_time.innerHTML = `
+            <span style="color: white;background-color: green;">
+            Salve o alviverde imponente</span>`;
+
+        } else if (time == "santos"){
+            msg_time.innerHTML = `
+            <span style="color: black;background-color: white;">
+            Agora que dá a bola é o Santos</span>`;
+
+        } else {
+            msg_time.innerHTML = `
+            <span style="color: white;background-color: black;">
+            Salve o Corinthians</span>`;
+        }
+    
+    }
+</script>

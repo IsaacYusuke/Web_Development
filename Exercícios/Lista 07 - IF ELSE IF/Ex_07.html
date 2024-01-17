@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    
+    <h3>Estações</h3>
+
+    <select id="estacoes" onchange="verificar_estacao()">
+        <option value="inverno">Janeiro</option>
+        <option value="inverno">Fevereiro</option>
+        <option value="primavera">Março</option>
+        <option value="primavera">Abril</option>
+        <option value="primavera">Maio</option>
+        <option value="verao">Junho</option>
+        <option value="verao">Julho</option>
+        <option value="verao">Agosto</option>
+        <option value="outono">Setembro</option>
+        <option value="outono">Outubro</option>
+        <option value="outono">Novembro</option>
+        <option value="inverno">Dezembro</option>
+    </select> <br>
+
+    <div id="msg_estacao"></div> <br>
+    <img id="img_estacao" width="300px">
+
+</body>
+</html>
+<script>
+    function verificar_estacao(){
+        var valor_estacoes = estacoes.value;
+
+        if (valor_estacoes == "inverno"){
+            msg_estacao.innerHTML = "Inverno";
+            img_estacao.src = 'inverno.jpg';
+
+        } else if (valor_estacoes == "primavera"){
+            msg_estacao.innerHTML = "Primavera";
+            img_estacao.src = 'primavera.jpg';
+
+        } else if (valor_estacoes == "verao"){
+            msg_estacao.innerHTML = "Verão";
+            img_estacao.src = 'verao.jpg';
+
+        } else {
+            msg_estacao.innerHTML = "Outono";
+            img_estacao.src = 'outono.jpg';
+        }
+    
+    }
+</script>

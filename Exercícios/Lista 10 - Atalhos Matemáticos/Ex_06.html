@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+</head>
+<body>
+    
+    <h3>Times de Futebol de São Paulo</h3>
+
+    <button onclick="sortear()">Sortear Time</button> <br>
+    <img id="img_time" width="150px">
+
+</body>
+</html>
+<script>
+    var time = 0;
+
+    function sortear(){
+        time = parseInt(Math.random() *4) +1;
+
+        if (time == 1){
+            img_time.src = 'sao_paulo.jpg';
+        } else if (time == 2){
+            img_time.src = 'palmeiras.png';
+        } else if (time == 3){
+            img_time.src = 'santos.png';
+        } else{
+            img_time.src = 'corinthians.png';
+        }
+    }
+</script>
